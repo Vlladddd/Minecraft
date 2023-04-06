@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://files.vgtimes.ru/download/posts/2020-12/thumbs/1608711306_2017_12_30_17_3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.header {
+    background-color: #ffffff22;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%;
+}
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1100px;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo {
+    width: 50px;
+    transition: 0.5s;
+}
+.logo__text {
+    color: aqua;
+}
+.header__menu {
+    display: flex;
+}
+.header__menu-item {
+    margin-left: 30px;
+    transition: 0.3s;
+}
+.header__menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.header__menu-item a:hover{
+    color: blue;
+}
+.logo :hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+}
