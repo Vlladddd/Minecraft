@@ -347,8 +347,7 @@ span {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 10px;
-        display: none;
+        padding: 20px 10px; 
     }
     /* HEADER-ADAPTIVE */
         .header__menu{
