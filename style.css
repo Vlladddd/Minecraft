@@ -19,13 +19,15 @@ body {
     width: 100%;
     box-shadow:  0px 10px 10px #000000;
     top: 0;
+    z-index: 100;
 }
 .header__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 1100px;
+    max-width: 1100px;
+    padding: 10px 0;
 }
 .header__logo {
     display: flex;
@@ -42,6 +44,7 @@ body {
 }
 .header__menu {
     display: flex;
+    color: #000000;
 }
 .header__menu-item {
     margin-left: 30px;
@@ -63,9 +66,7 @@ body {
 
 main {
     margin: 80px auto;
-    width: 1100px;
-    overflow: hidden;
-    
+    max-width: 1100px;
 }
 .main__body {
     position: relative;
@@ -102,7 +103,7 @@ main {
 @keyframes foto-2 {
     0% {
         top: 10%;
-        right: -20%;
+        right: -7%;
     }
     100% {
         top: 10%;
@@ -119,7 +120,7 @@ main {
 @keyframes foto-3 {
     0% {
         top: 10%;
-        left: -20%;
+        left: -7%;
     }
     100% {
         top: 10%;
@@ -130,10 +131,10 @@ main {
     color: #fff;
     margin-top: 80px;
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
 }
 .block_left {
-    width: 2500px;
     background-color: #39a4bcc0;
     padding: 20px;
     border-radius: 10px;
@@ -141,12 +142,12 @@ main {
 }
 .block_right {
     text-align: right;
-    margin-left: 80px;
+    margin-left: 0;
     background-color: #734088c0;
     padding: 20px;
-    width: 1000px;
     border-radius: 10px;
     font-style: italic;
+    margin: 20px auto;
 }
 
 .audio {
@@ -238,20 +239,144 @@ span {
     text-decoration: underline;
 }
 
-@media (max-width:575px) {
-
-}
 @media (max-width:767px) {
     body{
-        background-image: url(https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg);
+        background-image: url(https://oboi-telefon.ru/wallpapers/3429/39755.jpg);
     }
     .header__menu-item {
-        background-color: #fff;
+        background-color: #000000;
         padding: 5px 10px;
         border-radius: 10px;
         text-transform: uppercase;
     }
-    
+    .menu-link{
+        font-size: 20px;
+    }
+    .main__block{
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        padding: 0 15px;
+    }
+    .main__body {
+        flex-direction: column;
+        overflow: visible;
+        height: 1200px;
+        margin: 50px 0;
+        align-items: center;
+        display: flex;
+        padding: 25px;
+    }
+    .foto {
+        width: 300px;
+        position: relative;
+        border: 10px solid #ffffff6e;
+    }
+    .foto:nth-child(1) {
+        right: 0;
+        z-index: 2;
+        animation: foto-1 2s linear 1;
+    }
+    @keyframes foto-1 {
+        0% {
+        top: 150%;
+        }
+        50% {
+        top: 150%; 
+        }
+        100% {
+        top: 0; 
+        }
+    }
+    .foto:nth-child(2) {
+        right: 0;
+        width: 400px;
+        top: 10%;
+        animation: foto-2 3s linear 1;
+    }
+    @keyframes foto-2 {
+        0% {
+            top: 10%;
+            right: 0;
+        }
+        100% {
+            top: 10%;
+            right: 0;
+        }
+    }
+    .foto:nth-child(3) {
+        left: 0;
+        width: 400px;
+        z-index: 1;
+        top: 200px;
+        animation: foto-3 3s linear 1;
+    }
+    @keyframes foto-3 {
+        0% {
+            top: 50px;
+            left: 0;
+        }
+        100% {
+            top: 200px;
+            left: 0;
+        }
+    }
 }
 
-
+@media (max-width:523px) {
+    body {
+        background-image: url(https://oboi-telefon.ru/wallpapers/3433/37109.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .header {
+        background-color: #8023b2;
+        width: 100%;
+    }
+    .header__body {
+        border: 1px solid #000;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+    }
+    /* HEADER-ADAPTIVE */
+        .header__menu{
+            display: none;
+        }
+        .header__burger {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+        .burger__line {
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            top: 20px;
+            background-color: #fff;
+        }
+        .burger__line::before{
+            content: '';
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            top: 15px;
+            background-color: #fff;
+        }
+        .burger__line::after{
+            content: '';
+            width: 50px;
+            height: 3px;
+            bottom: 15px;
+            position: absolute;
+            background-color: #fff;
+        }
+}
+/* HEADER-ADAPTIVE END */
+/* HEADER END */
