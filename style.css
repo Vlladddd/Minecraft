@@ -63,7 +63,12 @@ body {
     transform: rotate(360deg);
     cursor: pointer;
 }
-
+.header__burger {
+    display: none;
+}
+.burger__line {
+    display: none;
+}
 main {
     margin: 80px auto;
     max-width: 1100px;
@@ -343,6 +348,7 @@ span {
         justify-content: space-between;
         align-items: center;
         padding: 20px 10px;
+        display: none;
     }
     /* HEADER-ADAPTIVE */
         .header__menu{
